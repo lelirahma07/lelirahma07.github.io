@@ -1,0 +1,70 @@
+body {
+    height: 100%;
+}
+
+   
+#mediascreen {
+    height: 600px;
+    width: 400px;
+    background: rgb(100, 100, 99);
+    position: relative;
+    display : flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    border-radius: 8px;
+    cursor: pointer;
+    justify-content: center;
+}
+  
+#mediascreen:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    align-items: center;
+    justify-content: center;
+}
+    
+#mediascreen:after {
+    content: 'Swipe Up in Here';
+    font-family: 'poppins', Poppins;
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    align-items: center;
+    justify-content: center;
+}
+
+  
+p {
+    background: rgb(51, 48, 48);
+    width: 400px;
+    font-family: 'poppins', Poppins;
+    font-weight: bold;
+    color : white;
+    text-align: center;
+
+    border-radius: 4px;
+}
+
+#mediascreen:hover {
+    animation: swipeup 5s;
+}
+
+@keyframes swipeup {
+    from {
+      top: 0;
+    }
+    to {
+      top: -400px;
+    }
+}
